@@ -129,3 +129,18 @@ IO.puts x
 (fn -> x = 0 end).()
 
 IO.puts x
+
+
+
+IO.puts "=============="
+IO.puts  "LINKEDS LISTS"
+IO.puts "=============="
+
+IO.inspect [1,2,3,4]
+IO.inspect [1,2,3] ++ [4,5,6]
+IO.inspect [1,2,3, false, true] -- [true, false]
+
+list = [1,2,3]
+
+IO.inspect(hd(list))
+IO.inspect(tl(list))
