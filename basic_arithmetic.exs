@@ -68,8 +68,20 @@ IO.puts is_float(1.0)
 IO.puts is_float(1)
 IO.puts "---------------"
 
- 
+
 IO.puts  "NUMBER"
 IO.puts  is_number(12)
 IO.puts  is_number("12")
 IO.puts "---------------"
+
+
+IO.puts "=============="
+IO.puts  "ATOM"
+IO.puts "=============="
+
+IO.puts :hello
+IO.puts :hello == :world
+
+IO.puts true == :true
+IO.puts is_atom(false)
+IO.puts is_boolean(:false)
