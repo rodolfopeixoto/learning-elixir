@@ -85,3 +85,47 @@ IO.puts :hello == :world
 IO.puts true == :true
 IO.puts is_atom(false)
 IO.puts is_boolean(:false)
+
+IO.puts "=============="
+IO.puts  "STRING"
+IO.puts "=============="
+
+IO.puts "hello"
+
+IO.puts "Hello #{:world}"
+IO.puts "hello ...> world"
+IO.puts "hello\nworld"
+
+IO.puts "hello\nworld"
+
+IO.puts is_binary("hello")
+IO.puts byte_size("hellô")
+IO.puts String.length("hellô")
+IO.puts String.upcase("hellô")
+
+
+IO.puts "=============="
+IO.puts  "ANONYMOUS FUNCTIONS"
+IO.puts "=============="
+
+add = fn a, b -> IO.puts a + b end
+
+add.(4,2)
+add.(4,4)
+add.(4,6)
+
+IO.puts is_function(add)
+
+IO.puts is_function(add, 2)
+IO.puts is_function(add, 1)
+
+double = fn a ->  add.(a,a)  end
+
+double.(4)
+
+x = 42
+IO.puts x
+
+(fn -> x = 0 end).()
+
+x
