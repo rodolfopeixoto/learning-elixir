@@ -128,4 +128,4 @@ IO.puts x
 
 (fn -> x = 0 end).()
 
-x
+IO.puts x
